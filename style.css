@@ -5,25 +5,87 @@ body {
     flex-flow: column nowrap;
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
-.content,
-.button-container,
-.game-area {
+.content {
     display: flex;
     flex-direction: column;
+    padding: 30px;
 }
 
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 500;
     height: 10vh;
+    margin-bottom: 20px;
 }
 
 .intro {
     height: 15vh;
 }
 
+.game-container {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+}
 
+.button-container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 25vw;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-button {
+    height: 50px;
+    width: 100px;
+}
+
+.game-area {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#arena {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.choice {
+    font-size: 20px;
+}
+
+#result {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.score-container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 25vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#player-score,
+#computer-score {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.footer {
+    padding: 15px;
+}
 
