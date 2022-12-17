@@ -15,19 +15,19 @@
     <div class="content">
         <div class="header">
             <div>Rock, Paper, Scissors</div>
-            <button id="reset-button">Reset</button>
+            <button id="reset-button" onclick="reset()">Reset</button>
         </div>
         <div class="intro">
             Welcome to Rock, Paper, Scissors, the most consequential game ever 
             created in the history of man.  The rules are simple; choose your weapon, 
-            and the computer chooses theirs.  Whoever wins the hand gains a point.  
-            Ready? Fight!
+            and the computer chooses theirs.  Whoever wins the hand gains a point,  
+            and first to five wins.  Ready? Fight!
         </div>
         <div class="game-container">
             <div class="button-container">
-                <button onclick="playRound(1, getComputerChoice())" id="game-button">Rock</button>
-                <button onclick="playRound(2, getComputerChoice())" id="game-button">Paper</button>
-                <button onclick="playRound(3, getComputerChoice())" id="game-button">Scissors</button>
+                <button onclick="playRound(1, getComputerChoice())" id="rock-button">Rock</button>
+                <button onclick="playRound(2, getComputerChoice())" id="paper-button">Paper</button>
+                <button onclick="playRound(3, getComputerChoice())" id="scissors-button">Scissors</button>
             </div>
             <div class="game-area">
                 <div id="arena">Arena</div>

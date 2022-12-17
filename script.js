@@ -2,11 +2,21 @@ let result;
 let playerScore = 0;
 let computerScore = 0;
 let playerChoiceValue, computerChoiceValue;
-let draw = false;
 const valMap = new Map();
 valMap.set(1, "Rock");
 valMap.set(2, "Paper");
 valMap.set(3, "Scissors");  //rock==1, paper==2, scissors==3
+
+function reset() {
+    playerScore = 0;
+    computerScore = 0;
+    updateLiveElements();
+    document.getElementById("rock-button").disabled = false;
+    document.getElementById("paper-button").disabled = false;
+    document.getElementById("scissors-button").disabled = false;    document.getElementById("you-chose").innerHTML = "-";
+    document.getElementById("computer-chose").innerHTML = "-";
+    document.getElementById("result").innerHTML = "You Reset the Game."
+}
 
 function getComputerChoice() {
     return(Math.ceil(Math.random()*3));
@@ -33,13 +43,24 @@ function playRound(playerSelection, computerSelection) {
 
     if ((x==1&&y==3)||(x==2&&y==1)||(x==3&&y==2)) {  //determine the winner
         playerScore++;
+        document.getElementById("result").innerHTML = "You Won!";
     } else if ((x==1&&y==2)||(x==2&&y==3)||(x==3&&y==1)) {
         computerScore++;
+        document.getElementById("result").innerHTML = "You Lost.";
     } else {
-        draw = true;
+        document.getElementById("result").innerHTML = "Draw!";
     }
-
     updateLiveElements();
-    draw = false;
+
+    if (playerScore === 5) {
+        document.getElementById("result").innerHTML = "You won the game! Reset or refresh the page to play again.";
+        document.getElementById("rock-button").disabled = true;
+        document.getElementById("paper-button").disabled = true;
+        document.getElementById("scissors-button").disabled = true;
+    } else if (computerScore === 5) {
+        document.getElementById("result").innerHTML = "The computer won the game.  Reset or refresh the page to play again.";
+        document.getElementById("rock-button").disabled = true;
+        document.getElementById("paper-button").disabled = true;
+        document.getElementById("scissors-button").disabled = true;    }
 }
 

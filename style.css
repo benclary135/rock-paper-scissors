@@ -11,7 +11,7 @@ body {
 .content {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    justify-content: space-between;
 }
 
 .header {
@@ -19,20 +19,34 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 30px;
     font-size: 35px;
     font-weight: 500;
-    height: 10vh;
-    margin-bottom: 20px;
+    height: 5vh;
+    color: #f4f4f4;
+    background-color: #192231;
+}
+
+#reset-button {
+    height: 50px;
+    width: 90px;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
 }
 
 .intro {
-    height: 15vh;
+    height: 10vh;
+    padding: 30px;
+    font-size: 22px;
 }
 
 .game-container {
     display: flex;
     flex-direction: row;
     height: 50vh;
+    background-color: #eddbcd;
+    padding: 30px;
 }
 
 .button-container {
@@ -44,7 +58,9 @@ body {
     align-items: center;
 }
 
-#game-button {
+#rock-button,
+#paper-button,
+#scissors-button {
     height: 50px;
     width: 100px;
 }
@@ -69,6 +85,7 @@ body {
 #result {
     font-size: 50px;
     font-weight: 500;
+    color: red;
 }
 
 .score-container {
@@ -87,5 +104,6 @@ body {
 
 .footer {
     padding: 15px;
+    background-color: #c0b283;
 }
 
